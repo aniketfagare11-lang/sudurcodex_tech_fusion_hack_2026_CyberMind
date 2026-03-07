@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GameConnect</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <link rel="stylesheet" href="Frontend/css/style.css" />
+    <link rel="icon" type="image/jpg" href="Frontend/images/logo.jpg">
 </head>
 
 <body>
@@ -15,16 +15,16 @@
     <nav class="navbar">
         <a href="index.html" class="nav-logo">
             <div class="brand">
-                <img src="images/logo.jpg" alt="GameConnect Logo" class="logo">
+                <img src="Frontend/images/logo.jpg" alt="GameConnect Logo" class="logo">
                 <h1>GameConnect</h1>
             </div>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="dashboard.html">Find Teammates</a></li>
-            <li><a href="tournaments.html">Tournaments</a></li>
+            <li><a href="Frontend/index.html" class="active">Home</a></li>
+            <li><a href="Frontend/dashboard.html">Find Teammates</a></li>
+            <li><a href="Frontend/tournaments.html">Tournaments</a></li>
             <li><a href="#leaderboard">Leaderboard</a></li>
-            <li><a href="profile.html" class="btn-login">Login</a></li>
+            <li><a href="Frontend/profile.html" class="btn-login">Login</a></li>
         </ul>
         <div class="hamburger"
             onclick="this.classList.toggle('active'); document.querySelector('.nav-links').classList.toggle('open')">
@@ -47,8 +47,8 @@
                 <p>Join tournaments, connect with elite gamers, and dominate every match. Your next championship starts
                     here.</p>
                 <div class="hero-cta">
-                    <a href="dashboard.html" class="btn btn-primary">⚡ Find Teammates</a>
-                    <a href="tournaments.html" class="btn btn-secondary">🏆 View Tournaments</a>
+                    <a href="Frontend/dashboard.html" class="btn btn-primary">⚡ Find Teammates</a>
+                    <a href="Frontend/tournaments.html" class="btn btn-secondary">🏆 View Tournaments</a>
                 </div>
                 <div class="hero-stats">
                     <div>
@@ -143,7 +143,7 @@
 
                 <div class="game-card-v2" data-game="bgmi">
                     <div class="game-card-v2-img"
-                        style="background-image:url('images/bgmi.jpg'); background-size:cover; background-position:center;">
+                        style="background-image:url('Frontend/images/bgmi.jpg'); background-size:cover; background-position:center;">
                         <div class="game-card-v2-pattern bgmi-pattern"></div>
                         <div class="game-card-v2-glow glow-blue"></div>
                     </div>
@@ -165,7 +165,7 @@
 
                 <div class="game-card-v2" data-game="freefire">
                     <div class="game-card-v2-img"
-                        style="background-image:url('images/freefire.jpg'); background-size:cover; background-position:center;">
+                        style="background-image:url('Frontend/images/freefire.jpg'); background-size:cover; background-position:center;">
                         <div class="game-card-v2-pattern ff-pattern"></div>
                         <div class="game-card-v2-glow glow-purple"></div>
                     </div>
@@ -187,7 +187,7 @@
 
                 <div class="game-card-v2" data-game="valorant">
                     <div class="game-card-v2-img"
-                        style="background-image:url('images/valorant.jpg'); background-size:cover; background-position:center;">
+                        style="background-image:url('Frontend/images/valorant.jpg'); background-size:cover; background-position:center;">
                         <div class="game-card-v2-pattern val-pattern"></div>
                         <div class="game-card-v2-glow glow-red"></div>
                     </div>
@@ -210,7 +210,7 @@
 
                 <div class="game-card-v2" data-game="codm">
                     <div class="game-card-v2-img"
-                        style="background-image:url('images/codm.jpg'); background-size:cover; background-position:center;">
+                        style="background-image:url('Frontend/images/codm.jpg'); background-size:cover; background-position:center;">
                         <div class="game-card-v2-pattern cod-pattern"></div>
                         <div class="game-card-v2-glow glow-orange"></div>
                     </div>
@@ -311,7 +311,7 @@
                     <div class="lb-podium-player lb-podium-2">
                         <div class="lb-podium-rank">2</div>
                         <div class="lb-podium-avatar">
-                            <img src="images/player1.jpg" alt="player">
+                            <img src="Frontend/images/player1.jpg" alt="player">
                         </div>
                         <div class="lb-podium-name">Aniket</div>
                         <div class="lb-podium-game">BGMI</div>
@@ -323,7 +323,7 @@
                         <div class="lb-champion-crown">👑</div>
                         <div class="lb-podium-rank lb-rank-gold">1</div>
                         <div class="lb-podium-avatar lb-avatar-gold">
-                            <img src="images/player3.jpg" alt="player">
+                            <img src="Frontend/images/player3.jpg" alt="player">
                         </div>
                         <div class="lb-podium-name lb-name-gold">Rahul</div>
                         <div class="lb-podium-game">BGMI</div>
@@ -334,7 +334,7 @@
                     <div class="lb-podium-player lb-podium-3">
                         <div class="lb-podium-rank">3</div>
                         <div class="lb-podium-avatar">
-                            <img src="images/player5.jpg" alt="player">
+                            <img src="Frontend/images/player5.jpg" alt="player">
                         </div>
                         <div class="lb-podium-name">Ajay</div>
                         <div class="lb-podium-game">Free Fire</div>
@@ -459,7 +459,7 @@
                 <div class="player-full-card glass-card" data-game="bgmi" data-name="prosniper_x" data-rank="conqueror">
                     <div class="pfc-header" style="background:linear-gradient(135deg,rgba(0,212,255,0.15),transparent)">
                         <div class="pfc-avatar">
-                            <img src="images/player1.jpg" alt="player">
+                            <img src="Frontend/images/player1.jpg" alt="player">
                         </div>
                         <div class="pfc-status online-status"><span class="online-dot-sm"></span>Online</div>
                     </div>
@@ -492,7 +492,7 @@
                     <div class="pfc-header"
                         style="background:linear-gradient(135deg,rgba(168,85,247,0.15),transparent)">
                         <div class="pfc-avatar">
-                            <img src="images/player4.jpg" alt="player">
+                            <img src="Frontend/images/player4.jpg" alt="player">
                         </div>
                         <div class="pfc-status online-status"><span class="online-dot-sm"></span>Online</div>
                     </div>
@@ -524,7 +524,7 @@
                     data-rank="radiant">
                     <div class="pfc-header" style="background:linear-gradient(135deg,rgba(244,63,94,0.15),transparent)">
                         <div class="pfc-avatar">
-                            <img src="images/player3.jpg" alt="player">
+                            <img src="Frontend/images/player3.jpg" alt="player">
                         </div>
                         <div class="pfc-status online-status"><span class="online-dot-sm"></span>Online</div>
                     </div>
@@ -555,7 +555,7 @@
                 <div class="player-full-card glass-card" data-game="bgmi" data-name="nightreaper99" data-rank="ace">
                     <div class="pfc-header" style="background:linear-gradient(135deg,rgba(0,212,255,0.15),transparent)">
                         <div class="pfc-avatar">
-                            <img src="images/player2.jpg" alt="player">
+                            <img src="Frontend/images/player2.jpg" alt="player">
                         </div>
                         <div class="pfc-status online-status"><span class="online-dot-sm"></span>Online</div>
                     </div>
@@ -587,7 +587,7 @@
                     <div class="pfc-header"
                         style="background:linear-gradient(135deg,rgba(251,146,60,0.15),transparent)">
                         <div class="pfc-avatar">
-                            <img src="images/player5.jpg" alt="player">
+                            <img src="Frontend/images/player5.jpg" alt="player">
                         </div>
                         <div class="pfc-status" style="color:var(--text-muted);font-size:0.72rem">Idle</div>
                     </div>
@@ -619,7 +619,7 @@
                     <div class="pfc-header"
                         style="background:linear-gradient(135deg,rgba(168,85,247,0.15),transparent)">
                         <div class="pfc-avatar">
-                            <img src="images/player6.jpg" alt="player">
+                            <img src="Frontend/images/player6.jpg" alt="player">
                         </div>
                         <div class="pfc-status online-status"><span class="online-dot-sm"></span>Online</div>
                     </div>
@@ -679,9 +679,10 @@
                         Join over 52,000 gamers already using GameConnect. Create your profile and find your squad
                         today.</p>
                     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-                        <a href="profile.html" class="btn btn-primary" style="font-size:1rem;padding:0.9rem 2rem">Create
+                        <a href="Frontend/profile.html" class="btn btn-primary"
+                            style="font-size:1rem;padding:0.9rem 2rem">Create
                             Free Account</a>
-                        <a href="tournaments.html" class="btn btn-secondary"
+                        <a href="Frontend/tournaments.html" class="btn btn-secondary"
                             style="font-size:1rem;padding:0.9rem 2rem">Browse Tournaments</a>
                     </div>
                 </div>
@@ -712,8 +713,8 @@
                 <div class="footer-col">
                     <h4>Platform</h4>
                     <ul>
-                        <li><a href="dashboard.html">Find Teammates</a></li>
-                        <li><a href="tournaments.html">Tournaments</a></li>
+                        <li><a href="Frontend/dashboard.html">Find Teammates</a></li>
+                        <li><a href="Frontend/tournaments.html">Tournaments</a></li>
                         <li><a href="#leaderboard">Leaderboard</a></li>
                         <li><a href="#players">Players</a></li>
                     </ul>
@@ -776,7 +777,7 @@
             <p class="modal-sub">Finding teammates for <strong id="gameModalName"
                     style="color:var(--neon-blue)">BGMI</strong>. Ready to build your squad?</p>
             <div style="display:flex;gap:0.75rem">
-                <a href="dashboard.html" class="btn btn-primary" style="flex:1;justify-content:center">Find
+                <a href="Frontend/dashboard.html" class="btn btn-primary" style="flex:1;justify-content:center">Find
                     Teammates</a>
                 <button class="btn btn-secondary" style="flex:1;justify-content:center"
                     onclick="closeModal('gameModal')">Later</button>
@@ -785,7 +786,7 @@
     </div>
     <div id="toast" class="toast">Invite Sent Successfully</div>
 
-    <script src="js/script.js"></script>
+    <script src="Frontend/js/script.js"></script>
 </body>
 
 </html>
