@@ -1,7 +1,7 @@
 # 🎮 GameConnect – Find Your Perfect Gaming Squad
 
 🚀 **Live Demo:**
-https://gameconnect-findteammets.netlify.app/
+[https://gameconnect-findteammets.netlify.app/](https://aniketfagare11-lang.github.io/sudurcodex_tech_fusion_hack_2026_CyberMind/)
 
 💻 **GitHub Repository:**
 https://github.com/aniketfagare11-lang/sudurcodex_tech_fusion_hack_2026_CyberMind
