@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile — GameConnect</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- sidebar -->
+        <aside class="sidebar">
+            <a href="index.html" class="sidebar-logo">
+                <div class="brand">
+                    <img src="images/logo.jpg" alt="GameConnect Logo" class="logo">
+                    <h1>GameConnect</h1>
+                </div>
+            </a>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html">
+                    <span class="nav-icon">⊞</span> Dashboard
+                </a>
+                <a href="dashboard.html#players">
+                    <span class="nav-icon">👥</span> Players
+                </a>
+                <a href="tournaments.html">
+                    <span class="nav-icon">🏆</span> Tournaments
+                </a>
+                <a href="profile.html" class="active">
+                    <span class="nav-icon">👤</span> Profile
+                </a>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-logout">
+                    <a href="index.html">
+                        <span class="nav-icon">⏻</span> Logout
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- main -->
+        <main class="dashboard-main">
+
+            <div class="dashboard-topbar">
+                <div style="display:flex;align-items:center;gap:1rem">
+                    <button class="mobile-menu-btn"
+                        onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ Menu</button>
+                    <div>
+                        <div class="topbar-title">My Profile</div>
+                        <div style="font-size:0.78rem;color:var(--text-muted)">Manage your gaming identity</div>
+                    </div>
+                </div>
+                <div class="topbar-avatar">🎮</div>
+            </div>
+
+            <div class="profile-page-grid">
+
+                <!-- left: profile card -->
+                <div style="display:flex;flex-direction:column;gap:1.5rem">
+
+                    <div class="glass-card profile-main-card">
+                        <div class="profile-avatar-lg">
+                            🎮
+                            <div class="avatar-edit">✏️</div>
+                        </div>
+                        <div class="profile-name" style="font-size:1.4rem">ShadowX</div>
+                        <div class="profile-game" style="font-size:0.9rem">BGMI • Conqueror</div>
+                        <div
+                            style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:0.5rem">
+                            <div class="profile-rank">⚔️ Diamond III</div>
+                        </div>
+                        <div class="profile-player-id">🆔 GC-4829-XSZ</div>
+
+                        <div
+                            style="display:flex;align-items:center;justify-content:center;gap:0.4rem;margin-top:0.85rem;font-size:0.82rem;color:var(--neon-green)">
+                            <span class="online-dot-sm"></span> Online
+                        </div>
+
+                        <div class="profile-stats">
+                            <div class="profile-stat">
+                                <div class="profile-stat-num">87</div>
+                                <div class="profile-stat-label">Wins</div>
+                            </div>
+                            <div class="profile-stat">
+                                <div class="profile-stat-num">342</div>
+                                <div class="profile-stat-label">Matches</div>
+                            </div>
+                            <div class="profile-stat">
+                                <div class="profile-stat-num">3.2</div>
+                                <div class="profile-stat-label">K/D</div>
+                            </div>
+                        </div>
+
+                        <div style="width:100%;margin-top:1.5rem">
+                            <div
+                                style="display:flex;justify-content:space-between;font-size:0.78rem;margin-bottom:0.4rem">
+                                <span style="color:var(--text-muted)">Win Rate</span>
+                                <span style="color:var(--neon-blue);font-weight:600">25%</span>
+                            </div>
+                            <div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden">
+                                <div
+                                    style="height:100%;width:25%;background:var(--gradient-blue);border-radius:3px;box-shadow:var(--glow-blue)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="width:100%;margin-top:1rem">
+                            <div
+                                style="display:flex;justify-content:space-between;font-size:0.78rem;margin-bottom:0.4rem">
+                                <span style="color:var(--text-muted)">Season Progress</span>
+                                <span style="color:var(--neon-purple);font-weight:600">4820 / 6000 RP</span>
+                            </div>
+                            <div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden">
+                                <div
+                                    style="height:100%;width:80%;background:var(--gradient-purple);border-radius:3px;box-shadow:var(--glow-purple)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- achievements -->
+                    <div class="glass-card section-card">
+                        <div class="section-card-header">
+                            <div class="section-card-title">🏅 Achievements</div>
+                        </div>
+                        <div class="achievements-list">
+                            <div class="achievement-item">
+                                <div class="achievement-icon">🥇</div>
+                                <div>
+                                    <div class="achievement-name">First Blood</div>
+                                    <div class="achievement-desc">Won your first tournament match</div>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">🔥</div>
+                                <div>
+                                    <div class="achievement-name">On Fire</div>
+                                    <div class="achievement-desc">10 kills in a single match</div>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">⚡</div>
+                                <div>
+                                    <div class="achievement-name">Speed Demon</div>
+                                    <div class="achievement-desc">Fastest squad win — 12 mins</div>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">🎯</div>
+                                <div>
+                                    <div class="achievement-name">Sharpshooter</div>
+                                    <div class="achievement-desc">80%+ headshot accuracy</div>
+                                </div>
+                            </div>
+                            <div class="achievement-item" style="opacity:0.4">
+                                <div class="achievement-icon">🏆</div>
+                                <div>
+                                    <div class="achievement-name">Champion 🔒</div>
+                                    <div class="achievement-desc">Win a ranked tournament</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- right: edit form -->
+                <div style="display:flex;flex-direction:column;gap:1.5rem">
+
+                    <div class="glass-card form-card">
+                        <div class="form-section-title">Personal Information</div>
+                        <form id="profileForm">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Display Name</label>
+                                    <input type="text" class="form-input" value="ShadowX"
+                                        placeholder="Enter display name" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Player ID</label>
+                                    <input type="text" class="form-input" value="GC-4829-XSZ" readonly
+                                        style="opacity:0.6;cursor:not-allowed" />
+                                </div>
+                                <div class="form-group full">
+                                    <label class="form-label">Bio</label>
+                                    <input type="text" class="form-input"
+                                        value="BGMI Conqueror | Squad player | Looking for serious teammates"
+                                        placeholder="Tell others about yourself" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-input" value="shadowx@email.com"
+                                        placeholder="Your email" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" class="form-input" value="+91 98765 43210"
+                                        placeholder="Phone number" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="glass-card form-card">
+                        <div class="form-section-title">Gaming Info</div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Primary Game</label>
+                                <select class="form-input">
+                                    <option selected>BGMI</option>
+                                    <option>Free Fire</option>
+                                    <option>Valorant</option>
+                                    <option>COD Mobile</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Current Rank</label>
+                                <select class="form-input">
+                                    <option>Bronze</option>
+                                    <option>Silver</option>
+                                    <option>Gold</option>
+                                    <option>Platinum</option>
+                                    <option selected>Diamond</option>
+                                    <option>Crown</option>
+                                    <option>Ace</option>
+                                    <option>Conqueror</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Play Style</label>
+                                <select class="form-input">
+                                    <option selected>Aggressive</option>
+                                    <option>Defensive</option>
+                                    <option>Support</option>
+                                    <option>Sniper</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Preferred Mode</label>
+                                <select class="form-input">
+                                    <option selected>Squad</option>
+                                    <option>Duo</option>
+                                    <option>Solo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">BGMI UID</label>
+                                <input type="text" class="form-input" value="5123456789" placeholder="In-game UID" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Region</label>
+                                <select class="form-input">
+                                    <option selected>South India</option>
+                                    <option>North India</option>
+                                    <option>East India</option>
+                                    <option>West India</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn btn-primary"
+                                onclick="document.getElementById('profileForm') && document.getElementById('profileForm').dispatchEvent(new Event('submit')); showNotification('✨ Profile saved successfully!')">💾
+                                Save Changes</button>
+                            <button class="btn btn-secondary"
+                                onclick="showNotification('↩️ Changes discarded')">Discard</button>
+                        </div>
+                    </div>
+
+                    <!-- recent activity -->
+                    <div class="glass-card section-card">
+                        <div class="section-card-header">
+                            <div class="section-card-title">⏱ Recent Activity</div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:0.75rem">
+
+                            <div
+                                style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:rgba(15,23,42,0.4);border-radius:10px;border:1px solid var(--border-color)">
+                                <div
+                                    style="width:36px;height:36px;border-radius:8px;background:rgba(0,212,255,0.12);display:flex;align-items:center;justify-content:center;font-size:1rem">
+                                    🏆</div>
+                                <div style="flex:1">
+                                    <div style="font-size:0.88rem;font-weight:600;font-family:'Rajdhani',sans-serif">
+                                        Joined BGMI Grand Prix S4</div>
+                                    <div style="font-size:0.75rem;color:var(--text-muted)">2 hours ago</div>
+                                </div>
+                                <span class="tag tag-upcoming">Joined</span>
+                            </div>
+
+                            <div
+                                style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:rgba(15,23,42,0.4);border-radius:10px;border:1px solid var(--border-color)">
+                                <div
+                                    style="width:36px;height:36px;border-radius:8px;background:rgba(34,197,94,0.12);display:flex;align-items:center;justify-content:center;font-size:1rem">
+                                    🏅</div>
+                                <div style="flex:1">
+                                    <div style="font-size:0.88rem;font-weight:600;font-family:'Rajdhani',sans-serif">
+                                        Earned "Sharpshooter" badge</div>
+                                    <div style="font-size:0.75rem;color:var(--text-muted)">Yesterday</div>
+                                </div>
+                                <span class="tag"
+                                    style="background:rgba(34,197,94,0.12);color:var(--neon-green);border:1px solid rgba(34,197,94,0.3)">New</span>
+                            </div>
+
+                            <div
+                                style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:rgba(15,23,42,0.4);border-radius:10px;border:1px solid var(--border-color)">
+                                <div
+                                    style="width:36px;height:36px;border-radius:8px;background:rgba(168,85,247,0.12);display:flex;align-items:center;justify-content:center;font-size:1rem">
+                                    ⚡</div>
+                                <div style="flex:1">
+                                    <div style="font-size:0.88rem;font-weight:600;font-family:'Rajdhani',sans-serif">
+                                        Invited by StormBolt</div>
+                                    <div style="font-size:0.75rem;color:var(--text-muted)">2 days ago</div>
+                                </div>
+                                <button class="btn btn-primary btn-sm"
+                                    onclick="invitePlayer('StormBolt'); this.textContent='✅ Accepted'; this.disabled=true">Accept</button>
+                            </div>
+
+                            <div
+                                style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:rgba(15,23,42,0.4);border-radius:10px;border:1px solid var(--border-color)">
+                                <div
+                                    style="width:36px;height:36px;border-radius:8px;background:rgba(251,146,60,0.12);display:flex;align-items:center;justify-content:center;font-size:1rem">
+                                    🎯</div>
+                                <div style="flex:1">
+                                    <div style="font-size:0.88rem;font-weight:600;font-family:'Rajdhani',sans-serif">
+                                        Match completed — 8 kills, #3 finish</div>
+                                    <div style="font-size:0.75rem;color:var(--text-muted)">3 days ago</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

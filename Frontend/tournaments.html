@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tournaments — GameConnect</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <div class="brand">
+                <img src="images/logo.jpg" alt="GameConnect Logo" class="logo">
+                <h1>GameConnect</h1>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Find Teammates</a></li>
+            <li><a href="tournaments.html" class="active">Tournaments</a></li>
+            <li><a href="profile.html" class="btn-login">Login</a></li>
+        </ul>
+        <div class="hamburger"
+            onclick="this.classList.toggle('active'); document.querySelector('.nav-links').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- page header -->
+    <div class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-orb"></div>
+        <div class="page-header-content container">
+            <div class="section-tag">⚔️ Compete</div>
+            <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-bottom:0.75rem">Tournaments</h1>
+            <p class="section-subtitle">Compete in official tournaments, win real prizes, and earn your place on the
+                global leaderboard.</p>
+            <div style="display:flex;align-items:center;justify-content:center;gap:2rem;margin-top:2rem;flex-wrap:wrap">
+                <div style="text-align:center">
+                    <div style="font-family:'Orbitron',monospace;font-size:1.5rem;font-weight:700;color:var(--neon-green)"
+                        data-count="48">0</div>
+                    <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px">
+                        Active Now</div>
+                </div>
+                <div style="width:1px;height:40px;background:var(--border-color)"></div>
+                <div style="text-align:center">
+                    <div
+                        style="font-family:'Orbitron',monospace;font-size:1.5rem;font-weight:700;color:var(--neon-blue)">
+                        ₹5L+</div>
+                    <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px">
+                        Prize Pool</div>
+                </div>
+                <div style="width:1px;height:40px;background:var(--border-color)"></div>
+                <div style="text-align:center">
+                    <div style="font-family:'Orbitron',monospace;font-size:1.5rem;font-weight:700;color:var(--neon-purple)"
+                        data-count="1240">0</div>
+                    <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px">
+                        Total Held</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tournaments content -->
+    <section class="section" style="padding-top:3rem">
+        <div class="container">
+
+            <!-- filters -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Games</button>
+                <button class="filter-btn" data-filter="bgmi">BGMI</button>
+                <button class="filter-btn" data-filter="freefire">Free Fire</button>
+                <button class="filter-btn" data-filter="valorant">Valorant</button>
+                <button class="filter-btn" data-filter="codm">COD Mobile</button>
+                <div style="margin-left:auto;display:flex;gap:0.5rem">
+                    <button class="filter-btn" data-filter="live">🔴 Live</button>
+                    <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                </div>
+            </div>
+
+            <!-- grid -->
+            <div class="tournaments-grid">
+
+                <!-- T1 -->
+                <div class="glass-card tournament-card" data-status="live" data-game="bgmi">
+                    <div class="tournament-header">
+                        <div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem">
+                                <span class="tag tag-live">🔴 Live</span>
+                                <span class="game-badge badge-blue"
+                                    style="font-size:0.7rem;padding:0.15rem 0.6rem">BGMI</span>
+                            </div>
+                            <div class="tournament-img">
+                                <img src="images/bgmi.jpg" alt="BGMI Tournament">
+                            </div>
+                            <div class="tournament-title">BGMI Pro League — Season 4</div>
+                            <div class="tournament-game">Battle Royale • Squad (4v4)</div>
+                        </div>
+                        <div class="prize-badge">
+                            <div class="prize-amount">₹50K</div>
+                            <div class="prize-label">Prize</div>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-detail"><span>📅</span><span>Dec 20–22, 2025</span></div>
+                        <div class="tournament-detail"><span>👥</span><span>128 Slots • 112 Filled</span></div>
+                        <div class="tournament-detail"><span>🌐</span><span>Pan-India Open</span></div>
+                    </div>
+                    <div
+                        style="background:rgba(239,68,68,0.08);border-radius:8px;padding:0.5rem 0.75rem;margin-bottom:1rem;font-size:0.8rem;color:#ef4444;border:1px solid rgba(239,68,68,0.2)">
+                        🔴 Tournament in progress — Spectate Live
+                    </div>
+                    <div class="tournament-footer">
+                        <div class="entry-fee">Entry: <span>₹149</span></div>
+                        <button class="btn btn-secondary btn-sm">👁 Watch Live</button>
+                    </div>
+                </div>
+
+                <!-- T2 -->
+                <div class="glass-card tournament-card" data-status="upcoming" data-game="bgmi">
+                    <div class="tournament-header">
+                        <div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem">
+                                <span class="tag tag-upcoming">Upcoming</span>
+                                <span class="game-badge badge-blue"
+                                    style="font-size:0.7rem;padding:0.15rem 0.6rem">BGMI</span>
+                            </div>
+                            <div class="tournament-img">
+                                <img src="images/bgmi.jpg" alt="BGMI Tournament">
+                            </div>
+                            <div class="tournament-title">BGMI Grand Prix — S4</div>
+                            <div class="tournament-game">Battle Royale • Duo</div>
+                        </div>
+                        <div class="prize-badge">
+                            <div class="prize-amount">₹25K</div>
+                            <div class="prize-label">Prize</div>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-detail"><span>📅</span><span>Dec 25, 2025 • 6:00 PM</span></div>
+                        <div class="tournament-detail"><span>👥</span><span>64 Slots • 41 Filled</span></div>
+                        <div class="tournament-detail"><span>🌐</span><span>South India</span></div>
+                    </div>
+                    <div class="tournament-footer">
+                        <div class="entry-fee">Entry: <span>₹49</span></div>
+                        <button class="btn btn-primary btn-sm" onclick="openJoinModal('BGMI Grand Prix S4','₹49')">Join
+                            Tournament</button>
+                    </div>
+                </div>
+
+                <!-- T3 -->
+                <div class="glass-card tournament-card" data-status="live" data-game="freefire">
+                    <div class="tournament-header">
+                        <div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem">
+                                <span class="tag tag-live">🔴 Live</span>
+                                <span class="game-badge badge-purple"
+                                    style="font-size:0.7rem;padding:0.15rem 0.6rem">Free Fire</span>
+                            </div>
+                            <div class="tournament-img">
+                                <img src="images/freefire.jpg" alt="Free Fire Tournament">
+                            </div>
+                            <div class="tournament-title">Free Fire Clash Royale</div>
+                            <div class="tournament-game">Battle Royale • Squad</div>
+                        </div>
+                        <div class="prize-badge">
+                            <div class="prize-amount">Free</div>
+                            <div class="prize-label">Entry</div>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-detail"><span>📅</span><span>Dec 20, 2025 • Ongoing</span></div>
+                        <div class="tournament-detail"><span>👥</span><span>256 Slots • Full</span></div>
+                        <div class="tournament-detail"><span>🌐</span><span>All India Open</span></div>
+                    </div>
+                    <div
+                        style="background:rgba(239,68,68,0.08);border-radius:8px;padding:0.5rem 0.75rem;margin-bottom:1rem;font-size:0.8rem;color:#ef4444;border:1px solid rgba(239,68,68,0.2)">
+                        🔴 Slots full — Spectating only
+                    </div>
+                    <div class="tournament-footer">
+                        <div class="entry-fee">Prize: <span>₹10,000</span></div>
+                        <button class="btn btn-secondary btn-sm">👁 Watch</button>
+                    </div>
+                </div>
+
+                <!-- T4 -->
+                <div class="glass-card tournament-card" data-status="upcoming" data-game="valorant">
+                    <div class="tournament-header">
+                        <div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem">
+                                <span class="tag tag-upcoming">Upcoming</span>
+                                <span class="game-badge badge-red"
+                                    style="font-size:0.7rem;padding:0.15rem 0.6rem">Valorant</span>
+                            </div>
+                            <div class="tournament-img">
+                                <img src="images/valorant.jpg" alt="Valorant Tournament">
+                            </div>
+                            <div class="tournament-title">Valorant Champions Cup</div>
+                            <div class="tournament-game">Tactical FPS • 5v5</div>
+                        </div>
+                        <div class="prize-badge">
+                            <div class="prize-amount">₹1L</div>
+                            <div class="prize-label">Prize</div>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-detail"><span>📅</span><span>Jan 5–7, 2026</span></div>
+                        <div class="tournament-detail"><span>👥</span><span>32 Teams • 18 Registered</span></div>
+                        <div class="tournament-detail"><span>🌐</span><span>National Qualifier</span></div>
+                    </div>
+                    <div class="tournament-footer">
+                        <div class="entry-fee">Entry: <span>₹299</span></div>
+                        <button class="btn btn-primary btn-sm"
+                            onclick="openJoinModal('Valorant Champions Cup','₹299')">Join Tournament</button>
+                    </div>
+                </div>
+
+                <!-- T5 -->
+                <div class="glass-card tournament-card" data-status="upcoming" data-game="codm">
+                    <div class="tournament-header">
+                        <div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem">
+                                <span class="tag tag-upcoming">Upcoming</span>
+                                <span class="game-badge badge-orange"
+                                    style="font-size:0.7rem;padding:0.15rem 0.6rem">COD Mobile</span>
+                            </div>
+                            <div class="tournament-img">
+                                <img src="images/codm.jpg" alt="COD Mobile Tournament">
+                            </div>
+                            <div class="tournament-title">COD Mobile Winter Wars</div>
+                            <div class="tournament-game">FPS • Squad (5v5)</div>
+                        </div>
+                        <div class="prize-badge">
+                            <div class="prize-amount">₹20K</div>
+                            <div class="prize-label">Prize</div>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-detail"><span>📅</span><span>Dec 28, 2025 • 8:00 PM</span></div>
+                        <div class="tournament-detail"><span>👥</span><span>64 Slots • 29 Filled</span></div>
+                        <div class="tournament-detail"><span>🌐</span><span>Open for All</span></div>
+                    </div>
+                    <div class="tournament-footer">
+                        <div class="entry-fee">Entry: <span>₹79</span></div>
+                        <button class="btn btn-primary btn-sm"
+                            onclick="openJoinModal('COD Mobile Winter Wars','₹79')">Join Tournament</button>
+                    </div>
+                </div>
+
+                <!-- T6 -->
+                <div class="glass-card tournament-card" data-status="upcoming" data-game="freefire">
+                    <div class="tournament-header">
+                        <div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem">
+                                <span class="tag tag-upcoming">Upcoming</span>
+                                <span class="game-badge badge-purple"
+                                    style="font-size:0.7rem;padding:0.15rem 0.6rem">Free Fire</span>
+                            </div>
+                            <div class="tournament-img">
+                                <img src="images/freefire.jpg" alt="Free Fire Tournament">
+                            </div>
+                            <div class="tournament-title">Free Fire Weekend Showdown</div>
+                            <div class="tournament-game">Battle Royale • Solo</div>
+                        </div>
+                        <div class="prize-badge">
+                            <div class="prize-amount">₹5K</div>
+                            <div class="prize-label">Prize</div>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-detail"><span>📅</span><span>Dec 22, 2025 • 3:00 PM</span></div>
+                        <div class="tournament-detail"><span>👥</span><span>100 Slots • 63 Filled</span></div>
+                        <div class="tournament-detail"><span>🌐</span><span>Beginner Friendly</span></div>
+                    </div>
+                    <div class="tournament-footer">
+                        <div class="entry-fee">Entry: <span>Free</span></div>
+                        <button class="btn btn-primary btn-sm"
+                            onclick="openJoinModal('Free Fire Weekend Showdown','Free')">Join Tournament</button>
+                    </div>
+                </div>
+
+                <!-- T7 -->
+                <div class="glass-card tournament-card" data-status="upcoming" data-game="bgmi">
+                    <div class="tournament-header">
+                        <div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem">
+                                <span class="tag tag-upcoming">Upcoming</span>
+                                <span class="game-badge badge-blue"
+                                    style="font-size:0.7rem;padding:0.15rem 0.6rem">BGMI</span>
+                            </div>
+                            <div class="tournament-img">
+                                <img src="images/bgmi.jpg" alt="BGMI Tournament">
+                            </div>
+                            <div class="tournament-title">BGMI New Year Blitz</div>
+                            <div class="tournament-game">Battle Royale • Squad</div>
+                        </div>
+                        <div class="prize-badge">
+                            <div class="prize-amount">₹75K</div>
+                            <div class="prize-label">Prize</div>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-detail"><span>📅</span><span>Jan 1, 2026 • 10:00 AM</span></div>
+                        <div class="tournament-detail"><span>👥</span><span>128 Slots • 7 Filled</span></div>
+                        <div class="tournament-detail"><span>🌐</span><span>Invitational + Open</span></div>
+                    </div>
+                    <div class="tournament-footer">
+                        <div class="entry-fee">Entry: <span>₹199</span></div>
+                        <button class="btn btn-primary btn-sm"
+                            onclick="openJoinModal('BGMI New Year Blitz','₹199')">Join Tournament</button>
+                    </div>
+                </div>
+
+                <!-- T8 -->
+                <div class="glass-card tournament-card" data-status="closed" data-game="valorant">
+                    <div class="tournament-header">
+                        <div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem">
+                                <span class="tag tag-closed">Closed</span>
+                                <span class="game-badge badge-red"
+                                    style="font-size:0.7rem;padding:0.15rem 0.6rem">Valorant</span>
+                            </div>
+                            <div class="tournament-img">
+                                <img src="images/valorant.jpg" alt="Valorant Tournament">
+                            </div>
+                            <div class="tournament-title">Valorant Campus Wars 2025</div>
+                            <div class="tournament-game">Tactical FPS • 5v5</div>
+                        </div>
+                        <div class="prize-badge" style="opacity:0.5">
+                            <div class="prize-amount">₹30K</div>
+                            <div class="prize-label">Prize</div>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-detail"><span>📅</span><span>Dec 15, 2025 — Ended</span></div>
+                        <div class="tournament-detail"><span>👥</span><span>32 Teams • Full</span></div>
+                        <div class="tournament-detail"><span>🏆</span><span>Winner: Team Nexus</span></div>
+                    </div>
+                    <div class="tournament-footer">
+                        <div class="entry-fee" style="color:var(--text-muted)">Registration Closed</div>
+                        <button class="btn btn-secondary btn-sm" style="opacity:0.5;cursor:not-allowed">Results</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- join modal -->
+    <div class="modal-overlay" id="joinModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('joinModal')">✕</button>
+            <div style="font-size:2.5rem;margin-bottom:1rem">🏆</div>
+            <div class="modal-title" id="modalTournamentName"></div>
+            <div class="modal-sub">Entry Fee: <strong id="modalEntryFee"
+                    style="color:var(--neon-green)"></strong><br>Confirm your registration to secure your slot.</div>
+            <div
+                style="background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.15);border-radius:10px;padding:1rem;margin-bottom:1.5rem;font-size:0.85rem;color:var(--text-secondary)">
+                ℹ️ By joining, you agree to the tournament rules. Entry fee is non-refundable.
+            </div>
+            <div style="display:flex;gap:0.75rem">
+                <button class="btn btn-primary" style="flex:1" onclick="this.innerText='Joined ✓'; this.disabled=true;">
+                    ✅ Confirm Join
+                </button>
+                <button class="btn btn-secondary" style="flex:1" onclick="closeModal('joinModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer" style="margin-top:2rem">
+        <div class="container">
+            <div class="footer-bottom">
+                <span>© 2025 GameConnect. All rights reserved.</span>
+                <span style="color:var(--neon-blue)">Developed by Aniket Fagare</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

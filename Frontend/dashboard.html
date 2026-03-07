@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — GameConnect</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- sidebar -->
+        <aside class="sidebar">
+            <a href="index.html" class="sidebar-logo">
+                <div class="brand">
+                    <img src="images/logo.jpg" alt="GameConnect Logo" class="logo">
+                    <h1>GameConnect</h1>
+                </div>
+            </a>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="active">
+                    <span class="nav-icon">⊞</span> Dashboard
+                </a>
+                <a href="dashboard.html#players">
+                    <span class="nav-icon">👥</span> Players
+                </a>
+                <a href="tournaments.html">
+                    <span class="nav-icon">🏆</span> Tournaments
+                </a>
+                <a href="profile.html">
+                    <span class="nav-icon">👤</span> Profile
+                </a>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-logout">
+                    <a href="index.html">
+                        <span class="nav-icon">⏻</span> Logout
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- main -->
+        <main class="dashboard-main">
+            <div class="dashboard-topbar">
+                <div style="display:flex;align-items:center;gap:1rem">
+                    <button class="mobile-menu-btn"
+                        onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ Menu</button>
+                    <div>
+                        <div class="topbar-title">Dashboard</div>
+                        <div style="font-size:0.78rem;color:var(--text-muted)">Welcome back, ShadowX ⚡</div>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div style="position:relative;cursor:pointer">
+                        <span style="font-size:1.3rem">🔔</span>
+                        <span
+                            style="position:absolute;top:-4px;right:-4px;width:14px;height:14px;background:var(--neon-blue);border-radius:50%;font-size:0.6rem;display:flex;align-items:center;justify-content:center;font-weight:700">3</span>
+                    </div>
+                    <div class="topbar-avatar">🎮</div>
+                </div>
+            </div>
+
+            <!-- stat cards -->
+            <div class="dashboard-grid-3" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+                <div class="glass-card stat-card">
+                    <div class="stat-top">
+                        <div class="stat-icon icon-blue">🎯</div>
+                        <span class="stat-change">+12%</span>
+                    </div>
+                    <div class="stat-num" data-count="342">0</div>
+                    <div class="stat-label">Matches Played</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-top">
+                        <div class="stat-icon icon-purple">🏆</div>
+                        <span class="stat-change">+8%</span>
+                    </div>
+                    <div class="stat-num" data-count="87">0</div>
+                    <div class="stat-label">Wins</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-top">
+                        <div class="stat-icon icon-green">💀</div>
+                        <span class="stat-change">+5%</span>
+                    </div>
+                    <div class="stat-num">3.2</div>
+                    <div class="stat-label">K/D Ratio</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-top">
+                        <div class="stat-icon icon-pink">⭐</div>
+                        <span class="stat-change">+2</span>
+                    </div>
+                    <div class="stat-num" data-count="4820">0</div>
+                    <div class="stat-label">Rank Points</div>
+                </div>
+            </div>
+
+            <!-- main grid -->
+            <div class="dashboard-grid">
+
+                <!-- left col -->
+                <div style="display:flex;flex-direction:column;gap:1.5rem">
+
+                    <!-- profile card -->
+                    <div class="glass-card profile-card">
+                        <div class="profile-avatar-wrap">
+                            <div class="profile-avatar">🎮</div>
+                            <div class="status-badge"></div>
+                        </div>
+                        <div class="profile-name">ShadowX</div>
+                        <div class="profile-game">🎮 BGMI • Conqueror</div>
+                        <div class="profile-rank">⚔️ Diamond III</div>
+                        <div class="profile-stats">
+                            <div class="profile-stat">
+                                <div class="profile-stat-num">87</div>
+                                <div class="profile-stat-label">Wins</div>
+                            </div>
+                            <div class="profile-stat">
+                                <div class="profile-stat-num">342</div>
+                                <div class="profile-stat-label">Matches</div>
+                            </div>
+                            <div class="profile-stat">
+                                <div class="profile-stat-num">25%</div>
+                                <div class="profile-stat-label">Win Rate</div>
+                            </div>
+                        </div>
+                        <div style="margin-top:1.25rem;display:flex;gap:0.75rem;justify-content:center">
+                            <a href="profile.html" class="btn btn-secondary btn-sm">Edit Profile</a>
+                            <a href="tournaments.html" class="btn btn-primary btn-sm">Find Match</a>
+                        </div>
+                    </div>
+
+                    <!-- online players -->
+                    <div class="glass-card section-card" id="players">
+                        <div class="section-card-header">
+                            <div class="section-card-title">🟢 Online Now</div>
+                            <a href="#" class="see-all">See all</a>
+                        </div>
+                        <div class="players-list">
+                            <div class="player-card">
+                                <div class="player-avatar" style="background:linear-gradient(135deg,#00d4ff,#0077ff)">🔥
+                                </div>
+                                <div class="player-info">
+                                    <div class="player-name">NightReaper99</div>
+                                    <div class="player-meta">
+                                        <span class="player-game">BGMI</span>
+                                        <span class="player-sep">•</span>
+                                        <span class="player-rank-tag">Ace</span>
+                                    </div>
+                                </div>
+                                <div class="online-indicator">
+                                    <span class="online-dot-sm"></span>
+                                    <span class="online-text">Online</span>
+                                </div>
+                            </div>
+                            <div class="player-card">
+                                <div class="player-avatar" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">⚡
+                                </div>
+                                <div class="player-info">
+                                    <div class="player-name">StormBolt</div>
+                                    <div class="player-meta">
+                                        <span class="player-game">Free Fire</span>
+                                        <span class="player-sep">•</span>
+                                        <span class="player-rank-tag">Heroic</span>
+                                    </div>
+                                </div>
+                                <div class="online-indicator">
+                                    <span class="online-dot-sm"></span>
+                                    <span class="online-text">Online</span>
+                                </div>
+                            </div>
+                            <div class="player-card">
+                                <div class="player-avatar" style="background:linear-gradient(135deg,#f472b6,#e11d48)">🌸
+                                </div>
+                                <div class="player-info">
+                                    <div class="player-name">KiraBlaze</div>
+                                    <div class="player-meta">
+                                        <span class="player-game">Valorant</span>
+                                        <span class="player-sep">•</span>
+                                        <span class="player-rank-tag">Immortal</span>
+                                    </div>
+                                </div>
+                                <div class="online-indicator">
+                                    <span class="online-dot-sm"></span>
+                                    <span class="online-text">Online</span>
+                                </div>
+                            </div>
+                            <div class="player-card">
+                                <div class="player-avatar" style="background:linear-gradient(135deg,#22c55e,#16a34a)">🌿
+                                </div>
+                                <div class="player-info">
+                                    <div class="player-name">GhostSniper</div>
+                                    <div class="player-meta">
+                                        <span class="player-game">BGMI</span>
+                                        <span class="player-sep">•</span>
+                                        <span class="player-rank-tag">Crown</span>
+                                    </div>
+                                </div>
+                                <div class="online-indicator">
+                                    <span class="online-dot-sm"></span>
+                                    <span class="online-text">Online</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- right col -->
+                <div style="display:flex;flex-direction:column;gap:1.5rem">
+
+                    <!-- find teammets -->
+                    <div class="glass-card section-card">
+                        <div class="section-card-header">
+                            <div class="section-card-title">🎯 Find Teammates</div>
+                            <a href="#" class="see-all">Filters ⚙️</a>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:0.75rem">
+
+                            <div class="player-card">
+                                <div class="player-avatar" style="background:linear-gradient(135deg,#fb923c,#f97316)">🦁
+                                </div>
+                                <div class="player-info">
+                                    <div class="player-name">ProSniper_X</div>
+                                    <div class="player-meta">
+                                        <span class="player-game">BGMI</span>
+                                        <span class="player-sep">•</span>
+                                        <span class="player-rank-tag">Conqueror</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm"
+                                    onclick="invitePlayer('ProSniper_X')">Invite</button>
+                            </div>
+
+                            <div class="player-card">
+                                <div class="player-avatar" style="background:linear-gradient(135deg,#00d4ff,#0077ff)">🌊
+                                </div>
+                                <div class="player-info">
+                                    <div class="player-name">IceQueen</div>
+                                    <div class="player-meta">
+                                        <span class="player-game">Free Fire</span>
+                                        <span class="player-sep">•</span>
+                                        <span class="player-rank-tag">Grandmaster</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm"
+                                    onclick="invitePlayer('IceQueen')">Invite</button>
+                            </div>
+
+                            <div class="player-card">
+                                <div class="player-avatar" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">⚔️
+                                </div>
+                                <div class="player-info">
+                                    <div class="player-name">DarkMatter7</div>
+                                    <div class="player-meta">
+                                        <span class="player-game">Valorant</span>
+                                        <span class="player-sep">•</span>
+                                        <span class="player-rank-tag">Radiant</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm"
+                                    onclick="invitePlayer('DarkMatter7')">Invite</button>
+                            </div>
+
+                            <div class="player-card">
+                                <div class="player-avatar" style="background:linear-gradient(135deg,#f472b6,#e11d48)">💎
+                                </div>
+                                <div class="player-info">
+                                    <div class="player-name">RoseKiller</div>
+                                    <div class="player-meta">
+                                        <span class="player-game">BGMI</span>
+                                        <span class="player-sep">•</span>
+                                        <span class="player-rank-tag">Ace Master</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm"
+                                    onclick="invitePlayer('RoseKiller')">Invite</button>
+                            </div>
+
+                            <div class="player-card">
+                                <div class="player-avatar" style="background:linear-gradient(135deg,#22c55e,#16a34a)">🐉
+                                </div>
+                                <div class="player-info">
+                                    <div class="player-name">DragonFist</div>
+                                    <div class="player-meta">
+                                        <span class="player-game">COD Mobile</span>
+                                        <span class="player-sep">•</span>
+                                        <span class="player-rank-tag">Legend</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm"
+                                    onclick="invitePlayer('DragonFist')">Invite</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- upcoming tournaments  -->
+                    <div class="glass-card section-card">
+                        <div class="section-card-header">
+                            <div class="section-card-title">🏆 Upcoming Tournaments</div>
+                            <a href="tournaments.html" class="see-all">View All</a>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:1rem">
+
+                            <div
+                                style="display:flex;align-items:center;justify-content:space-between;padding:1rem;background:rgba(15,23,42,0.5);border-radius:10px;border:1px solid var(--border-color)">
+                                <div>
+                                    <div
+                                        style="font-family:'Rajdhani',sans-serif;font-weight:700;margin-bottom:0.25rem">
+                                        🏆 BGMI Grand Prix S4</div>
+                                    <div style="font-size:0.78rem;color:var(--text-muted)">📅 Dec 25 • 💰 ₹49</div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.4rem">
+                                    <span class="tag tag-upcoming">Upcoming</span>
+                                    <button class="btn btn-primary btn-sm"
+                                        onclick="openJoinModal('BGMI Grand Prix S4','₹49')">Join</button>
+                                </div>
+                            </div>
+
+                            <div
+                                style="display:flex;align-items:center;justify-content:space-between;padding:1rem;background:rgba(15,23,42,0.5);border-radius:10px;border:1px solid rgba(239,68,68,0.2)">
+                                <div>
+                                    <div
+                                        style="font-family:'Rajdhani',sans-serif;font-weight:700;margin-bottom:0.25rem">
+                                        🔴 Free Fire Clash</div>
+                                    <div style="font-size:0.78rem;color:var(--text-muted)">📅 Dec 20 • 💰 Free</div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.4rem">
+                                    <span class="tag tag-live">Live</span>
+                                    <button class="btn btn-purple btn-sm"
+                                        onclick="openJoinModal('Free Fire Clash','Free')">Join</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- join modal -->
+    <div class="modal-overlay" id="joinModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('joinModal')">✕</button>
+            <div style="font-size:2.5rem;margin-bottom:1rem">🏆</div>
+            <div class="modal-title" id="modalTournamentName">Tournament Name</div>
+            <div class="modal-sub">Entry Fee: <strong id="modalEntryFee" style="color:var(--neon-green)">₹49</strong> •
+                Confirm your registration to secure your spot.</div>
+            <div style="display:flex;gap:0.75rem">
+                <button class="btn btn-primary" style="flex:1" onclick="confirmJoin()">✅ Confirm Join</button>
+                <button class="btn btn-secondary" style="flex:1" onclick="closeModal('joinModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

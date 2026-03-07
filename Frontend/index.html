@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameConnect</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <div class="brand">
+                <img src="images/logo.jpg" alt="GameConnect Logo" class="logo">
+                <h1>GameConnect</h1>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="dashboard.html">Find Teammates</a></li>
+            <li><a href="tournaments.html">Tournaments</a></li>
+            <li><a href="#leaderboard">Leaderboard</a></li>
+            <li><a href="profile.html" class="btn-login">Login</a></li>
+        </ul>
+        <div class="hamburger"
+            onclick="this.classList.toggle('active'); document.querySelector('.nav-links').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+        <div class="container hero-container" style="padding-top:6rem">
+            <div class="hero-content">
+                <div class="hero-badge"><span class="badge-dot"></span>12,000+ Active Players Online</div>
+                <h1>Find Your<span class="highlight">Perfect Squad</span></h1>
+                <p>Join tournaments, connect with elite gamers, and dominate every match. Your next championship starts
+                    here.</p>
+                <div class="hero-cta">
+                    <a href="dashboard.html" class="btn btn-primary">⚡ Find Teammates</a>
+                    <a href="tournaments.html" class="btn btn-secondary">🏆 View Tournaments</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-num" data-count="52000">0</div>
+                        <div class="hero-stat-label">Registered Players</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num" data-count="1240">0</div>
+                        <div class="hero-stat-label">Tournaments Held</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num" data-count="890">0</div>
+                        <div class="hero-stat-label">Active Squads</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- live stats -->
+    <section class="section live-stats-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">📡 Live</div>
+                <h2 class="section-title">Platform at a Glance</h2>
+                <p class="section-subtitle">Real-time numbers from the GameConnect community</p>
+            </div>
+            <div class="live-stats-grid">
+
+                <div class="live-stat-card glass-card">
+                    <div class="live-stat-bg live-stat-bg-blue"></div>
+                    <div class="live-stat-inner">
+                        <div class="live-stat-icon-wrap icon-blue"><span class="live-stat-icon">🎮</span></div>
+                        <div class="live-stat-content">
+                            <div class="live-stat-number"><span class="live-stat-count" data-count="1200">0</span><span
+                                    class="live-stat-plus">+</span></div>
+                            <div class="live-stat-label">Active Players</div>
+                            <div class="live-stat-sub">Playing right now</div>
+                        </div>
+                        <div class="live-stat-pulse"><span class="pulse-ring"></span><span
+                                class="pulse-dot-blue"></span></div>
+                    </div>
+                </div>
+
+                <div class="live-stat-card glass-card">
+                    <div class="live-stat-bg live-stat-bg-purple"></div>
+                    <div class="live-stat-inner">
+                        <div class="live-stat-icon-wrap icon-purple"><span class="live-stat-icon">🏆</span></div>
+                        <div class="live-stat-content">
+                            <div class="live-stat-number"><span class="live-stat-count" data-count="85">0</span><span
+                                    class="live-stat-plus">+</span></div>
+                            <div class="live-stat-label">Tournaments Hosted</div>
+                            <div class="live-stat-sub">This month alone</div>
+                        </div>
+                        <div class="live-stat-pulse"><span class="pulse-ring pulse-ring-purple"></span><span
+                                class="pulse-dot-purple"></span></div>
+                    </div>
+                </div>
+
+                <div class="live-stat-card glass-card">
+                    <div class="live-stat-bg live-stat-bg-green"></div>
+                    <div class="live-stat-inner">
+                        <div class="live-stat-icon-wrap icon-green"><span class="live-stat-icon">⚔️</span></div>
+                        <div class="live-stat-content">
+                            <div class="live-stat-number"><span class="live-stat-count" data-count="350">0</span><span
+                                    class="live-stat-plus">+</span></div>
+                            <div class="live-stat-label">Teams Created</div>
+                            <div class="live-stat-sub">Squads ready to dominate</div>
+                        </div>
+                        <div class="live-stat-pulse"><span class="pulse-ring pulse-ring-green"></span><span
+                                class="pulse-dot-green"></span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- games -->
+    <section class="section" id="games">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">🎮 Featured</div>
+                <h2 class="section-title">Popular Games</h2>
+                <p class="section-subtitle">Choose your battlefield and find your squad instantly</p>
+            </div>
+            <div class="games-grid-v2">
+
+                <div class="game-card-v2" data-game="bgmi">
+                    <div class="game-card-v2-img"
+                        style="background-image:url('images/bgmi.jpg'); background-size:cover; background-position:center;">
+                        <div class="game-card-v2-pattern bgmi-pattern"></div>
+                        <div class="game-card-v2-glow glow-blue"></div>
+                    </div>
+                    <div class="game-card-v2-body">
+                        <div class="game-card-v2-top">
+                            <span class="game-badge badge-blue">Battle Royale</span>
+                            <span class="game-online-pill"><span class="online-dot"></span> 8,420 online</span>
+                        </div>
+                        <h3 class="game-card-v2-title">BGMI</h3>
+                        <p class="game-card-v2-desc">India's premier battle royale squad game. Outlast 99 players, loot
+                            strategically and be the last team standing.</p>
+                        <div class="game-card-v2-footer">
+                            <span class="game-card-v2-meta">342 active tournaments</span>
+                            <button class="btn btn-primary btn-sm" onclick="selectGame('BGMI','🎯')">Select
+                                Game</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card-v2" data-game="freefire">
+                    <div class="game-card-v2-img"
+                        style="background-image:url('images/freefire.jpg'); background-size:cover; background-position:center;">
+                        <div class="game-card-v2-pattern ff-pattern"></div>
+                        <div class="game-card-v2-glow glow-purple"></div>
+                    </div>
+                    <div class="game-card-v2-body">
+                        <div class="game-card-v2-top">
+                            <span class="game-badge badge-purple">Battle Royale</span>
+                            <span class="game-online-pill"><span class="online-dot"></span> 6,180 online</span>
+                        </div>
+                        <h3 class="game-card-v2-title">Free Fire</h3>
+                        <p class="game-card-v2-desc">Fast-paced battle royale built for mobile. 50 players, intense
+                            10-minute matches, and explosive squad action.</p>
+                        <div class="game-card-v2-footer">
+                            <span class="game-card-v2-meta">218 active tournaments</span>
+                            <button class="btn btn-purple btn-sm" onclick="selectGame('Free Fire','🔥')">Select
+                                Game</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card-v2" data-game="valorant">
+                    <div class="game-card-v2-img"
+                        style="background-image:url('images/valorant.jpg'); background-size:cover; background-position:center;">
+                        <div class="game-card-v2-pattern val-pattern"></div>
+                        <div class="game-card-v2-glow glow-red"></div>
+                    </div>
+                    <div class="game-card-v2-body">
+                        <div class="game-card-v2-top">
+                            <span class="game-badge badge-red">Tactical FPS</span>
+                            <span class="game-online-pill"><span class="online-dot"></span> 11,390 online</span>
+                        </div>
+                        <h3 class="game-card-v2-title">Valorant</h3>
+                        <p class="game-card-v2-desc">Precision-based 5v5 tactical shooter. Master unique agent abilities
+                            and outsmart your opponents every round.</p>
+                        <div class="game-card-v2-footer">
+                            <span class="game-card-v2-meta">480 active tournaments</span>
+                            <button class="btn btn-sm"
+                                style="background:linear-gradient(135deg,#f43f5e,#be123c);color:#fff;box-shadow:0 0 16px rgba(244,63,94,0.4)"
+                                onclick="selectGame('Valorant','⚡')">Select Game</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card-v2" data-game="codm">
+                    <div class="game-card-v2-img"
+                        style="background-image:url('images/codm.jpg'); background-size:cover; background-position:center;">
+                        <div class="game-card-v2-pattern cod-pattern"></div>
+                        <div class="game-card-v2-glow glow-orange"></div>
+                    </div>
+                    <div class="game-card-v2-body">
+                        <div class="game-card-v2-top">
+                            <span class="game-badge badge-orange">FPS</span>
+                            <span class="game-online-pill"><span class="online-dot"></span> 5,230 online</span>
+                        </div>
+                        <h3 class="game-card-v2-title">COD Mobile</h3>
+                        <p class="game-card-v2-desc">Call of Duty's legendary multiplayer on mobile. Seasonal modes,
+                            Battle Royale, and ranked 5v5 matches.</p>
+                        <div class="game-card-v2-footer">
+                            <span class="game-card-v2-meta">196 active tournaments</span>
+                            <button class="btn btn-sm"
+                                style="background:linear-gradient(135deg,#fb923c,#ea580c);color:#fff;box-shadow:0 0 16px rgba(251,146,60,0.4)"
+                                onclick="selectGame('COD Mobile','💥')">Select Game</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- features -->
+    <section class="section" style="background:linear-gradient(180deg,transparent,rgba(168,85,247,0.03),transparent)">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">✨ Platform</div>
+                <h2 class="section-title">Everything You Need<br>To Dominate</h2>
+                <p class="section-subtitle">All the tools an esports player needs in one powerful platform</p>
+            </div>
+            <div class="features-grid">
+                <div class="glass-card feature-card">
+                    <div class="feature-icon icon-blue">🎯</div>
+                    <h3>Find Teammates</h3>
+                    <p>Match with skilled players based on your game, rank, and playstyle. Build your dream squad in
+                        seconds.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon icon-purple">🏆</div>
+                    <h3>Join Tournaments</h3>
+                    <p>Compete in daily, weekly, and monthly tournaments with real cash prizes and exclusive in-game
+                        rewards.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon icon-green">📡</div>
+                    <h3>Online Players</h3>
+                    <p>See who's online right now and send instant invites. Never wait for a full squad again.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon icon-pink">📊</div>
+                    <h3>Stats & Rankings</h3>
+                    <p>Track your K/D, win rate, and climb the global leaderboard. Show off your skills to potential
+                        teammates.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon icon-orange">🎙️</div>
+                    <h3>In-Game Voice</h3>
+                    <p>Crystal-clear team communication with ultra-low latency voice chat built right into the platform.
+                    </p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon icon-blue">🛡️</div>
+                    <h3>Anti-Cheat Shield</h3>
+                    <p>Every tournament is protected by our advanced anti-cheat system ensuring fair play for everyone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- leaderboard-->
+    <section class="section leaderboard-section" id="leaderboard">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">🏅 Rankings</div>
+                <h2 class="section-title">Top Players Leaderboard</h2>
+                <p class="section-subtitle">The most dominant gamers on the platform this season</p>
+            </div>
+
+            <div class="leaderboard-wrap">
+                <div class="lb-orb lb-orb-1"></div>
+                <div class="lb-orb lb-orb-2"></div>
+
+                <div class="lb-season-bar">
+                    <span class="lb-season-dot"></span>
+                    <span>Season 4 — December 2025</span>
+                    <span class="lb-live-tag">🔴 LIVE</span>
+                </div>
+
+                <!-- podium -->
+                <div class="lb-podium">
+                    <div class="lb-podium-player lb-podium-2">
+                        <div class="lb-podium-rank">2</div>
+                        <div class="lb-podium-avatar">
+                            <img src="images/player1.jpg" alt="player">
+                        </div>
+                        <div class="lb-podium-name">Aniket</div>
+                        <div class="lb-podium-game">BGMI</div>
+                        <div class="lb-podium-badge lb-badge-silver">Crown</div>
+                        <div class="lb-podium-pts">4,210 pts</div>
+                        <div class="lb-podium-block lb-block-2"></div>
+                    </div>
+                    <div class="lb-podium-player lb-podium-1">
+                        <div class="lb-champion-crown">👑</div>
+                        <div class="lb-podium-rank lb-rank-gold">1</div>
+                        <div class="lb-podium-avatar lb-avatar-gold">
+                            <img src="images/player3.jpg" alt="player">
+                        </div>
+                        <div class="lb-podium-name lb-name-gold">Rahul</div>
+                        <div class="lb-podium-game">BGMI</div>
+                        <div class="lb-podium-badge lb-badge-gold">Ace Dominator</div>
+                        <div class="lb-podium-pts lb-pts-gold">5,840 pts</div>
+                        <div class="lb-podium-block lb-block-1"></div>
+                    </div>
+                    <div class="lb-podium-player lb-podium-3">
+                        <div class="lb-podium-rank">3</div>
+                        <div class="lb-podium-avatar">
+                            <img src="images/player5.jpg" alt="player">
+                        </div>
+                        <div class="lb-podium-name">Ajay</div>
+                        <div class="lb-podium-game">Free Fire</div>
+                        <div class="lb-podium-badge lb-badge-bronze">Heroic</div>
+                        <div class="lb-podium-pts">3,975 pts</div>
+                        <div class="lb-podium-block lb-block-3"></div>
+                    </div>
+                </div>
+
+                <!-- table -->
+                <div class="lb-table-wrap glass-card">
+                    <div class="lb-table-header">
+                        <span>Rank</span><span>Player</span><span>Game</span><span>Tier</span><span>Wins</span><span>Points</span><span></span>
+                    </div>
+                    <div class="lb-row lb-row-gold">
+                        <span class="lb-row-rank"><span class="lb-trophy">🏆</span>1</span>
+                        <span class="lb-row-player">
+                            <div class="lb-row-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706)">R
+                            </div><span class="lb-row-name">Rahul</span>
+                        </span>
+                        <span class="lb-row-game"><span class="game-badge badge-blue"
+                                style="font-size:0.68rem;padding:0.15rem 0.5rem">BGMI</span></span>
+                        <span><span class="lb-tier-badge lb-tier-ace">Ace Dominator</span></span>
+                        <span class="lb-row-wins">87</span>
+                        <span class="lb-row-pts">5,840</span>
+                        <span><button class="btn btn-sm btn-secondary"
+                                onclick="openSquadModal('Rahul','BGMI')">Invite</button></span>
+                    </div>
+                    <div class="lb-row">
+                        <span class="lb-row-rank">🥈 2</span>
+                        <span class="lb-row-player">
+                            <div class="lb-row-avatar" style="background:linear-gradient(135deg,#94a3b8,#64748b)">A
+                            </div><span class="lb-row-name">Aniket</span>
+                        </span>
+                        <span class="lb-row-game"><span class="game-badge badge-blue"
+                                style="font-size:0.68rem;padding:0.15rem 0.5rem">BGMI</span></span>
+                        <span><span class="lb-tier-badge lb-tier-crown">Crown</span></span>
+                        <span class="lb-row-wins">74</span>
+                        <span class="lb-row-pts">4,210</span>
+                        <span><button class="btn btn-sm btn-secondary"
+                                onclick="openSquadModal('Aniket','BGMI')">Invite</button></span>
+                    </div>
+                    <div class="lb-row">
+                        <span class="lb-row-rank">🥉 3</span>
+                        <span class="lb-row-player">
+                            <div class="lb-row-avatar" style="background:linear-gradient(135deg,#fb923c,#ea580c)">Aj
+                            </div><span class="lb-row-name">Ajay</span>
+                        </span>
+                        <span class="lb-row-game"><span class="game-badge badge-purple"
+                                style="font-size:0.68rem;padding:0.15rem 0.5rem">Free Fire</span></span>
+                        <span><span class="lb-tier-badge lb-tier-heroic">Heroic</span></span>
+                        <span class="lb-row-wins">68</span>
+                        <span class="lb-row-pts">3,975</span>
+                        <span><button class="btn btn-sm btn-secondary"
+                                onclick="openSquadModal('Ajay','Free Fire')">Invite</button></span>
+                    </div>
+                    <div class="lb-row">
+                        <span class="lb-row-rank">&nbsp;&nbsp;&nbsp;4</span>
+                        <span class="lb-row-player">
+                            <div class="lb-row-avatar" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">K
+                            </div><span class="lb-row-name">KiraBlaze</span>
+                        </span>
+                        <span class="lb-row-game"><span class="game-badge badge-red"
+                                style="font-size:0.68rem;padding:0.15rem 0.5rem">Valorant</span></span>
+                        <span><span class="lb-tier-badge lb-tier-immortal">Immortal</span></span>
+                        <span class="lb-row-wins">61</span>
+                        <span class="lb-row-pts">3,620</span>
+                        <span><button class="btn btn-sm btn-secondary"
+                                onclick="openSquadModal('KiraBlaze','Valorant')">Invite</button></span>
+                    </div>
+                    <div class="lb-row">
+                        <span class="lb-row-rank">&nbsp;&nbsp;&nbsp;5</span>
+                        <span class="lb-row-player">
+                            <div class="lb-row-avatar" style="background:linear-gradient(135deg,#22c55e,#16a34a)">G
+                            </div><span class="lb-row-name">GhostSniper</span>
+                        </span>
+                        <span class="lb-row-game"><span class="game-badge badge-blue"
+                                style="font-size:0.68rem;padding:0.15rem 0.5rem">BGMI</span></span>
+                        <span><span class="lb-tier-badge lb-tier-crown">Crown</span></span>
+                        <span class="lb-row-wins">58</span>
+                        <span class="lb-row-pts">3,310</span>
+                        <span><button class="btn btn-sm btn-secondary"
+                                onclick="openSquadModal('GhostSniper','BGMI')">Invite</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- players -->
+    <section class="section" id="players">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">👥 Community</div>
+                <h2 class="section-title">Find Players</h2>
+                <p class="section-subtitle">Search, filter, and invite teammates who match your game and rank</p>
+            </div>
+
+            <!-- search bar -->
+            <div class="player-search-wrap">
+                <div class="player-search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="playerSearchInput" class="player-search-input"
+                        placeholder="Search players by game, name or rank..." oninput="filterPlayers(this.value)" />
+                    <button class="search-clear-btn" id="searchClear" onclick="clearSearch()"
+                        style="display:none">✕</button>
+                </div>
+                <div class="search-filter-pills">
+                    <button class="pill-btn pill-active" onclick="filterByGame('all',this)">All</button>
+                    <button class="pill-btn" onclick="filterByGame('bgmi',this)">BGMI</button>
+                    <button class="pill-btn" onclick="filterByGame('freefire',this)">Free Fire</button>
+                    <button class="pill-btn" onclick="filterByGame('valorant',this)">Valorant</button>
+                    <button class="pill-btn" onclick="filterByGame('codm',this)">COD Mobile</button>
+                </div>
+            </div>
+
+            <!-- player cards -->
+            <div class="player-cards-grid" id="playerCardsGrid">
+
+                <div class="player-full-card glass-card" data-game="bgmi" data-name="prosniper_x" data-rank="conqueror">
+                    <div class="pfc-header" style="background:linear-gradient(135deg,rgba(0,212,255,0.15),transparent)">
+                        <div class="pfc-avatar">
+                            <img src="images/player1.jpg" alt="player">
+                        </div>
+                        <div class="pfc-status online-status"><span class="online-dot-sm"></span>Online</div>
+                    </div>
+                    <div class="pfc-body">
+                        <div class="pfc-name">ProSniper_X</div>
+                        <div class="pfc-sub"><span class="game-badge badge-blue"
+                                style="font-size:0.7rem">BGMI</span><span class="pfc-rank">Conqueror</span></div>
+                        <div class="pfc-stats">
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">4.1</div>
+                                <div class="pfc-stat-l">K/D</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">62%</div>
+                                <div class="pfc-stat-l">Win</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">214</div>
+                                <div class="pfc-stat-l">Matches</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary pfc-invite-btn" onclick="showToast()">
+                            ⚡ Join Squad
+                        </button>
+                    </div>
+                </div>
+
+                <div class="player-full-card glass-card" data-game="freefire" data-name="icequeen"
+                    data-rank="grandmaster">
+                    <div class="pfc-header"
+                        style="background:linear-gradient(135deg,rgba(168,85,247,0.15),transparent)">
+                        <div class="pfc-avatar">
+                            <img src="images/player4.jpg" alt="player">
+                        </div>
+                        <div class="pfc-status online-status"><span class="online-dot-sm"></span>Online</div>
+                    </div>
+                    <div class="pfc-body">
+                        <div class="pfc-name">IceQueen</div>
+                        <div class="pfc-sub"><span class="game-badge badge-purple" style="font-size:0.7rem">Free
+                                Fire</span><span class="pfc-rank">Grandmaster</span></div>
+                        <div class="pfc-stats">
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">3.8</div>
+                                <div class="pfc-stat-l">K/D</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">57%</div>
+                                <div class="pfc-stat-l">Win</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">188</div>
+                                <div class="pfc-stat-l">Matches</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary pfc-invite-btn" onclick="showToast()">
+                            ⚡ Join Squad
+                        </button>
+                    </div>
+                </div>
+
+                <div class="player-full-card glass-card" data-game="valorant" data-name="darkmatter7"
+                    data-rank="radiant">
+                    <div class="pfc-header" style="background:linear-gradient(135deg,rgba(244,63,94,0.15),transparent)">
+                        <div class="pfc-avatar">
+                            <img src="images/player3.jpg" alt="player">
+                        </div>
+                        <div class="pfc-status online-status"><span class="online-dot-sm"></span>Online</div>
+                    </div>
+                    <div class="pfc-body">
+                        <div class="pfc-name">DarkMatter7</div>
+                        <div class="pfc-sub"><span class="game-badge badge-red"
+                                style="font-size:0.7rem">Valorant</span><span class="pfc-rank">Radiant</span></div>
+                        <div class="pfc-stats">
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">5.2</div>
+                                <div class="pfc-stat-l">K/D</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">71%</div>
+                                <div class="pfc-stat-l">Win</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">340</div>
+                                <div class="pfc-stat-l">Matches</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary pfc-invite-btn" onclick="showToast()">
+                            ⚡ Join Squad
+                        </button>
+                    </div>
+                </div>
+
+                <div class="player-full-card glass-card" data-game="bgmi" data-name="nightreaper99" data-rank="ace">
+                    <div class="pfc-header" style="background:linear-gradient(135deg,rgba(0,212,255,0.15),transparent)">
+                        <div class="pfc-avatar">
+                            <img src="images/player2.jpg" alt="player">
+                        </div>
+                        <div class="pfc-status online-status"><span class="online-dot-sm"></span>Online</div>
+                    </div>
+                    <div class="pfc-body">
+                        <div class="pfc-name">NightReaper99</div>
+                        <div class="pfc-sub"><span class="game-badge badge-blue"
+                                style="font-size:0.7rem">BGMI</span><span class="pfc-rank">Ace</span></div>
+                        <div class="pfc-stats">
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">3.5</div>
+                                <div class="pfc-stat-l">K/D</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">48%</div>
+                                <div class="pfc-stat-l">Win</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">297</div>
+                                <div class="pfc-stat-l">Matches</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary pfc-invite-btn" onclick="showToast()">
+                            ⚡ Join Squad
+                        </button>
+                    </div>
+                </div>
+
+                <div class="player-full-card glass-card" data-game="codm" data-name="dragonfist" data-rank="legend">
+                    <div class="pfc-header"
+                        style="background:linear-gradient(135deg,rgba(251,146,60,0.15),transparent)">
+                        <div class="pfc-avatar">
+                            <img src="images/player5.jpg" alt="player">
+                        </div>
+                        <div class="pfc-status" style="color:var(--text-muted);font-size:0.72rem">Idle</div>
+                    </div>
+                    <div class="pfc-body">
+                        <div class="pfc-name">DragonFist</div>
+                        <div class="pfc-sub"><span class="game-badge badge-orange" style="font-size:0.7rem">COD
+                                Mobile</span><span class="pfc-rank">Legend</span></div>
+                        <div class="pfc-stats">
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">4.7</div>
+                                <div class="pfc-stat-l">K/D</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">65%</div>
+                                <div class="pfc-stat-l">Win</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">422</div>
+                                <div class="pfc-stat-l">Matches</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary pfc-invite-btn" onclick="showToast()">
+                            ⚡ Join Squad
+                        </button>
+                    </div>
+                </div>
+
+                <div class="player-full-card glass-card" data-game="freefire" data-name="stormbolt" data-rank="heroic">
+                    <div class="pfc-header"
+                        style="background:linear-gradient(135deg,rgba(168,85,247,0.15),transparent)">
+                        <div class="pfc-avatar">
+                            <img src="images/player6.jpg" alt="player">
+                        </div>
+                        <div class="pfc-status online-status"><span class="online-dot-sm"></span>Online</div>
+                    </div>
+                    <div class="pfc-body">
+                        <div class="pfc-name">StormBolt</div>
+                        <div class="pfc-sub"><span class="game-badge badge-purple" style="font-size:0.7rem">Free
+                                Fire</span><span class="pfc-rank">Heroic</span></div>
+                        <div class="pfc-stats">
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">3.1</div>
+                                <div class="pfc-stat-l">K/D</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">44%</div>
+                                <div class="pfc-stat-l">Win</div>
+                            </div>
+                            <div class="pfc-stat">
+                                <div class="pfc-stat-n">176</div>
+                                <div class="pfc-stat-l">Matches</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary pfc-invite-btn" onclick="showToast()">
+                            ⚡ Join Squad
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="no-results" id="noResults" style="display:none">
+                <div style="font-size:2.5rem;margin-bottom:0.75rem">🔍</div>
+                <div
+                    style="font-family:'Rajdhani',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text-secondary)">
+                    No players found</div>
+                <div style="font-size:0.85rem;color:var(--text-muted);margin-top:0.3rem">Try a different game or search
+                    term</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cta banner -->
+    <section class="section" style="padding:2rem 0 4rem">
+        <div class="container">
+            <div class="glass-card"
+                style="padding:3.5rem;text-align:center;background:linear-gradient(135deg,rgba(0,212,255,0.07) 0%,rgba(168,85,247,0.07) 100%);position:relative;overflow:hidden">
+                <div
+                    style="position:absolute;top:-80px;right:-80px;width:250px;height:250px;border-radius:50%;background:var(--neon-blue);opacity:0.06;filter:blur(60px)">
+                </div>
+                <div
+                    style="position:absolute;bottom:-80px;left:-80px;width:250px;height:250px;border-radius:50%;background:var(--neon-purple);opacity:0.06;filter:blur(60px)">
+                </div>
+                <div style="position:relative;z-index:1">
+                    <div class="section-tag" style="margin-bottom:1rem">🚀 Get Started</div>
+                    <h2 class="section-title" style="margin-bottom:1rem">Ready to Level Up?</h2>
+                    <p
+                        style="color:var(--text-secondary);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">
+                        Join over 52,000 gamers already using GameConnect. Create your profile and find your squad
+                        today.</p>
+                    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+                        <a href="profile.html" class="btn btn-primary" style="font-size:1rem;padding:0.9rem 2rem">Create
+                            Free Account</a>
+                        <a href="tournaments.html" class="btn btn-secondary"
+                            style="font-size:1rem;padding:0.9rem 2rem">Browse Tournaments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo" style="margin-bottom:0.5rem;display:inline-flex">
+                        <div class="logo-icon">⚡</div>
+                        <span class="logo-text">GameConnect</span>
+                    </a>
+                    <p>The ultimate platform for competitive gamers to find teammates, join tournaments, and dominate
+                        the leaderboards.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">𝕏</a>
+                        <a href="#" class="social-link">in</a>
+                        <a href="#" class="social-link">▶</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">💬</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Find Teammates</a></li>
+                        <li><a href="tournaments.html">Tournaments</a></li>
+                        <li><a href="#leaderboard">Leaderboard</a></li>
+                        <li><a href="#players">Players</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Games</h4>
+                    <ul>
+                        <li><a href="#games">BGMI</a></li>
+                        <li><a href="#games">Free Fire</a></li>
+                        <li><a href="#games">Valorant</a></li>
+                        <li><a href="#games">COD Mobile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 GameConnect. All rights reserved.</span>
+                <span style="color:var(--neon-blue)">Developed by Aniket Fagare</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- squad invitation -->
+    <div class="modal-overlay" id="squadModal">
+        <div class="modal squad-modal">
+            <button class="modal-close" onclick="closeModal('squadModal')">✕</button>
+            <div class="squad-modal-icon">⚔️</div>
+            <div class="squad-modal-title">Squad Invitation</div>
+            <div class="squad-modal-player" id="squadModalPlayerName">ProSniper_X</div>
+            <p class="modal-sub">Do you want to invite this player to your squad? They'll receive an instant
+                notification.</p>
+            <div class="squad-modal-info">
+                <div class="squad-info-item"><span>🎮</span><span id="squadModalGame">BGMI</span></div>
+                <div class="squad-info-item"><span>🟢</span><span>Online Now</span></div>
+                <div class="squad-info-item"><span>👥</span><span>Squad has 2/4 slots</span></div>
+            </div>
+            <div style="display:flex;gap:0.75rem;margin-top:1.5rem">
+                <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="acceptSquadInvite()">✅
+                    Accept</button>
+                <button class="btn btn-secondary" style="flex:1;justify-content:center"
+                    onclick="closeModal('squadModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- game select modal -->
+    <div class="modal-overlay" id="gameModal">
+        <div class="modal" style="text-align:center">
+            <button class="modal-close" onclick="closeModal('gameModal')">✕</button>
+            <div style="font-size:2.8rem;margin-bottom:0.75rem" id="gameModalIcon">🎯</div>
+            <div class="modal-title" id="gameModalTitle">Game Selected</div>
+            <p class="modal-sub">Finding teammates for <strong id="gameModalName"
+                    style="color:var(--neon-blue)">BGMI</strong>. Ready to build your squad?</p>
+            <div style="display:flex;gap:0.75rem">
+                <a href="dashboard.html" class="btn btn-primary" style="flex:1;justify-content:center">Find
+                    Teammates</a>
+                <button class="btn btn-secondary" style="flex:1;justify-content:center"
+                    onclick="closeModal('gameModal')">Later</button>
+            </div>
+        </div>
+    </div>
+    <div id="toast" class="toast">Invite Sent Successfully</div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
