@@ -104,6 +104,8 @@ if (profileForm) {
 
 // confirm join
 function confirmJoin() {
+    btn.innerText = "Joined";
+    btn.style.backgroundColor = "#00e5ff";
     closeModal('joinModal');
     setTimeout(() => showNotification('🏆 You joined the tournament! Good luck!'), 300);
 }
