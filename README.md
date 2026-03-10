@@ -186,33 +186,6 @@ GameConnect can be expanded into a full esports platform with the following feat
 
 ---
 
-# 📷 Project Screenshots
-
-### Homepage
-
-![Homepage](D:\GameConnect\Screenshots\Screenshot (11).png)
-
-### Popular Games Section
-
-![Games](D:\GameConnect\Screenshots\Screenshot (12).png)
-
-### Dashboard
-
-![Dashboard](D:\GameConnect\Screenshots\Screenshot (14).png)
-
-### Player Profile
-
-![Profile](D:\GameConnect\Screenshots\Screenshot (14).png)
-
-### Leaderboard
-
-![Leaderboard](D:\GameConnect\Screenshots\Screenshot (13).png)
-
-### Tournaments Page
-
-![Tournaments](D:\GameConnect\Screenshots\Screenshot (16).png)
-
----
 
 # 👨‍💻 Developer
 
